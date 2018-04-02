@@ -12,6 +12,7 @@ const Nav = () => {
       <NavLink exact to="/" className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></NavLink>
       <NavLink exact to="/" className="nav-item nav-link" href="#">Features</NavLink>
       <NavLink exact to="/admin" className="nav-item nav-link" href="#">Admin</NavLink>
+      <NavLink exact to="/user" className="nav-item nav-link" href="#">User</NavLink>  
       <NavLink exact to="/venue-admin" className="nav-item nav-link" href="#">Venue Admin</NavLink>      
     </div>
   </div>

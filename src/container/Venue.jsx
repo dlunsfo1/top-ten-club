@@ -2,11 +2,11 @@ import React from 'react';
 
 const Venue = (props) => (
   <div className="card">
-    <img
+    <a href="/venue-detail"><img
       className="card-img-top"
       src="http://tomhoran.com/wp-content/uploads/2014/03/elliottsoysterbar.jpg"
       alt="Card image cap"
-    />
+    /></a>
     <div className="card-body">
       <h5 className="card-title">{props.name}</h5>
       <p className="card-text">

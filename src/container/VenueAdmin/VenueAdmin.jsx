@@ -185,7 +185,7 @@ class VenueAdmin extends Component {
 
     // turn the object into an array
 
-    const formElementsArray =[];
+    const formElementsArray = [];
     for (let key in this.state.venueform) {
       formElementsArray.push({
         id: key,
@@ -212,7 +212,7 @@ class VenueAdmin extends Component {
         )
       }
         {/* was onClick={this.venueUpdateHandler} but a better way is onSubmit */}
-          <button >submit</button>
+        <button style={{marginTop: "20px"}}  type="submit" className="btn btn-primary" >submit</button>
         </form>
     );
     if(this.state.loading) {

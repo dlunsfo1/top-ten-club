@@ -26,6 +26,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-preset-env": "^1.6.1",
+    "bcrypt-nodejs": "0.0.3",
     "bootstrap": "^4.0.0",
     "eslint-config-hackreactor": "github:hackreactor-labs/eslint-config-hackreactor",
     "express": "^4.16.3",

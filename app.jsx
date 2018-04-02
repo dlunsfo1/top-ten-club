@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Home from './src/components/Home.jsx';
 import Admin from './src/container/Admin/Admin.jsx';
 import About from './src/components/About.jsx';
+import User from './src/container/User/User';
+import VenueDetail from './src/container//VenueDetail/VenuDetail';
 import VenueAdmin from './src/container/VenueAdmin/VenueAdmin.jsx';
 import Nav from './src/UI/Nav/Nav.jsx';
 import Footer from './src/UI/Footer/Footer.jsx';
@@ -22,7 +24,10 @@ class app extends Component {
       <Route path="/about" component={About}/>
       <Route path="/admin" component={Admin}/>
       <Route path="/venue-admin" component={VenueAdmin} />
+      <Route path="/user" component={User} />
+      <Route path="/venue-detail" component={VenueDetail} />
       <Route exact path="/" component={Home}/>
+
       </Switch>
     </div>
       <Footer />
