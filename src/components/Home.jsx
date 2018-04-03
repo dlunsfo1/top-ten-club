@@ -26,10 +26,34 @@ class Home extends Component {
     return (
       <Aux>
         <div className="container">
-        {/* <div className="card-deck"> */}
-        <Venues />
-        </div>
-        {/* </div> */}
+        <div className="row">
+
+            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+              <div className="overlay">
+                <div className="text lnr lnr-heart"></div>
+              </div>
+          </div>
+
+            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+              <div className="overlay">
+                <div className="text lnr lnr-heart"></div>
+              </div>
+          </div>
+
+            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+              <div className="overlay">
+                <div className="text lnr lnr-heart"></div>
+              </div>
+          </div>
+
+            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+              <div className="overlay">
+                <div className="text lnr lnr-heart"></div>
+              </div>
+          </div>
+      </div>
+      </div>
+
       </Aux> 
     );
   }

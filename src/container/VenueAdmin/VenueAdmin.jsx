@@ -4,7 +4,7 @@ import Button from '../../UI/Button/Button.jsx';
 import Spinner from '../../UI/Spinner/Spinner';
 import Input from '../../UI/Form/Input/Input';
 import axios from '../../../axios-topten';
-//import VenueService from '../../components/VenueService/VenueService';
+import venueService from '../../components/VenueService/VenueService';
 
 class VenueAdmin extends Component {
   state = {
@@ -38,6 +38,23 @@ class VenueAdmin extends Component {
           valid: false
    
       },
+      about: {
+
+        elementType: 'textarea',
+        elementConfig: {
+          type: 'textarea',
+          placeholder: 'About',
+          label: 'About',
+          rows: 10,
+          cols: 80
+        },
+        value: '',
+        validation: {
+          required: true
+        },
+        valid: false
+ 
+    },      
       street: {
 
           elementType: 'input',
@@ -120,6 +137,8 @@ class VenueAdmin extends Component {
     loading: false
   }
 
+  addItemService = new venueService();
+
   componentWillMount() {
     console.log('componentWillMount');
   }
@@ -137,18 +156,20 @@ class VenueAdmin extends Component {
       venueData: formData
     }
 
-    // this.VenueService.sendData(formData);
+    console.log(formData);
+    
+    this.addItemService.sendData(formData);
 
-    axios
-      .post('https://topten-7ff98.firebaseio.com/venues/venue.json', venue)
-      .then(response => {
-        console.log(response);
-        this.setState({ loading: false });
-      })
-      .catch(error => {
-        console.log(error);
-        this.setState({ loadding: false });
-      });   
+    // axios
+    //   .post('https://topten-7ff98.firebaseio.com/venues/venue.json', venue)
+    //   .then(response => {
+    //     console.log(response);
+    //     this.setState({ loading: false });
+    //   })
+    //   .catch(error => {
+    //     console.log(error);
+    //     this.setState({ loadding: false });
+    //   });   
   }
 
   checkValidityHandler(value, rules) {
@@ -174,7 +195,7 @@ class VenueAdmin extends Component {
     };
 
     updatedVenueFormElement.value = event.target.value;
-    updatedVenueFormElement.value = this.checkValidityHandler(updatedVenueFormElement.value, updatedVenueFormElement.validation);
+    //updatedVenueFormElement.value = this.checkValidityHandler(updatedVenueFormElement.value, updatedVenueFormElement.validation);
     console.log(updatedVenueFormElement);
 
     updatedVenueForm[inputIdentifier] = updatedVenueFormElement;

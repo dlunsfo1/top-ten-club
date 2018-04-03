@@ -3,8 +3,27 @@ import axios from 'axios';
 import Aux from '../../hoc/Aux/Aux';
 
 class VenueDetail extends Component {
+  state ={
+    venue: null
+  }
+
+  componentDidMount(){
+    axios.get('http://localhost:4200/items/edit/5ac2df601be331ef682ed21c')
+    
+    .then(response => {
+      this.setState({ venue: response.data});
+      console.log('detail ', this.state.venue)
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  }
+
+ 
 
 render() {
+
+   let currentVenue = {};
 
    return (
      <Aux>

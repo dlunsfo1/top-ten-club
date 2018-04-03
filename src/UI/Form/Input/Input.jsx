@@ -7,7 +7,7 @@ const input = (props) => {
       inputElement = <input {...props.elementConfig} 
       value={props.value} 
       onChange={props.changed}  className='form-control'/>;
-    } else if (props.elementConfig.type === 'textara') {
+    } else if (props.elementConfig.type === 'textarea') {
       inputElement = <textarea {...props.elementConfig} 
       value={props.value} 
       onChange={props.changed} 

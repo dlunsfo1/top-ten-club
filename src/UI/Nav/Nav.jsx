@@ -10,6 +10,7 @@ const Nav = () => {
   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div className="navbar-nav">
       <NavLink exact to="/" className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></NavLink>
+      <NavLink exact to="/venues" className="nav-item nav-link" href="#">All Venues</NavLink>
       <NavLink exact to="/" className="nav-item nav-link" href="#">Features</NavLink>
       <NavLink exact to="/admin" className="nav-item nav-link" href="#">Admin</NavLink>
       <NavLink exact to="/user" className="nav-item nav-link" href="#">User</NavLink>  

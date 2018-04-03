@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Home from './components/Home.jsx';
 import Admin from './container/Admin/Admin.jsx';
+import Venues from './container/Venues/Venues';
 import About from './components/About.jsx';
 import User from './container/User/User';
 import VenueDetail from './container//VenueDetail/VenuDetail';
@@ -22,6 +23,7 @@ class app extends Component {
     <div className="App">
     <Switch>
       <Route path="/about" component={About}/>
+      <Route path="/venues" component={Venues} />
       <Route path="/admin" component={Admin}/>
       <Route path="/venue-admin" component={VenueAdmin} />
       <Route path="/user" component={User} />
