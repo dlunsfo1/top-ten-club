@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Venue = (props) => (
-  <div className="card">
+  <div className="card" key={props.id}>
     <a href="/venue-detail"><img
       className="card-img-top"
       src="http://tomhoran.com/wp-content/uploads/2014/03/elliottsoysterbar.jpg"

@@ -3,9 +3,11 @@
 import express from 'express';
 import path from 'path';
 
-const app = express();
+var expressRouter = express.Router();
 
+const app = express();
 const port = 8080;
+
 // app.use('/', Express.static('public'));
 app.use('/', express.static('dist'));
 

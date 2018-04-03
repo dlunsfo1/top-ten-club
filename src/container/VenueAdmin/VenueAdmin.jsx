@@ -4,6 +4,7 @@ import Button from '../../UI/Button/Button.jsx';
 import Spinner from '../../UI/Spinner/Spinner';
 import Input from '../../UI/Form/Input/Input';
 import axios from '../../../axios-topten';
+//import VenueService from '../../components/VenueService/VenueService';
 
 class VenueAdmin extends Component {
   state = {
@@ -135,6 +136,8 @@ class VenueAdmin extends Component {
     const venue = {
       venueData: formData
     }
+
+    // this.VenueService.sendData(formData);
 
     axios
       .post('https://topten-7ff98.firebaseio.com/venues/venue.json', venue)
