@@ -4,6 +4,10 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var port = 4200;
 var cors = require('cors');
+// adding in authentication 'lite'
+
+var bcrypt = require('bcrypt-nodejs');
+var session = require('express-session');
 
 // Mongoose connection with mongodb
 mongoose.Promise = require('bluebird');
@@ -20,7 +24,8 @@ mongoose
   });
 
 // Required application specific custom router module
-var itemRouter = require('./src/routes/index');
+var itemRouter = require('./src/routes/venue');
+var userRouter = require('./src/routes/user');
 
 // Use middlewares to set view engine and post json data to the server
 app.use(cors());
@@ -28,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/items', itemRouter);
+app.use('/user', userRouter);
 
 // Start the server
 app.listen(port, function() {

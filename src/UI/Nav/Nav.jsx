@@ -3,7 +3,7 @@ import { BrowserRouter, Route, NavLink, Link } from 'react-router-dom';
 const Nav = () => {
   return (
 <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{marginBottom: '50px'}}>
-  <a className="navbar-brand" href="#">Navbar</a>
+  <a className="navbar-brand" href="/">Top Ten Club</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -14,6 +14,7 @@ const Nav = () => {
       <NavLink exact to="/" className="nav-item nav-link" href="#">Features</NavLink>
       <NavLink exact to="/admin" className="nav-item nav-link" href="#">Admin</NavLink>
       <NavLink exact to="/user" className="nav-item nav-link" href="#">User</NavLink>  
+      <NavLink exact to="/log-in" className="nav-item nav-link" href="#">Login</NavLink>  
       <NavLink exact to="/venue-admin" className="nav-item nav-link" href="#">Venue Admin</NavLink>      
     </div>
   </div>

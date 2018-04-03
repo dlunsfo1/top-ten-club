@@ -2,13 +2,15 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Define collection and schema for Venues
+
 let Venue = new Schema(
   {
     item: {
       name: String,
       website: String,
+      telephone: String,
       about: String,
-      address: String,
+      street: String,
       city: String,
       state: String,
       zipcode: String,

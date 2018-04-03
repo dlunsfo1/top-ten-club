@@ -63,7 +63,7 @@ class Venues extends Component {
        <div className="row">
        <div className="col-md">
       { this.state.venues.map((venue, i) => (
-        <Venue key={venue._id} name={venue.item.name} />
+        <Venue key={venue._id} name={venue.item.name} itemkey={venue._id} />
       )) }
       </div>
       </div>

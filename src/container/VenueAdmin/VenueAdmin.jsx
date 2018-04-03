@@ -54,7 +54,21 @@ class VenueAdmin extends Component {
         },
         valid: false
  
-    },      
+    },  
+    telephone: {
+      elementType: 'input',
+      elementConfig: {
+        type: 'text',
+        placeholder: 'Telephone',
+        label: 'Telephone'
+      },
+      value: '',
+      validation: {
+        required: true
+      },
+      valid: false
+
+  },    
       street: {
 
           elementType: 'input',
