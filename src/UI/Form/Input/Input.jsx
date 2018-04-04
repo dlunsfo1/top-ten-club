@@ -2,17 +2,17 @@ import React from 'react';
 
 const input = (props) => {
     let inputElement = null;
-    console.log('type', props.elementConfig.type);
-    if (props.elementConfig.type === 'text') {
+    console.log('type', props.elementType);
+    if (props.elementType === 'input') {
       inputElement = <input {...props.elementConfig} 
       value={props.value} 
       onChange={props.changed}  className='form-control'/>;
-    } else if (props.elementConfig.type === 'textarea') {
+    } else if (props.elementType === 'textarea') {
       inputElement = <textarea {...props.elementConfig} 
       value={props.value} 
       onChange={props.changed} 
       className='form-control'/>;
-    } else if (props.elementConfig.type === 'select') {
+    } else if (props.elementType === 'select') {
       console.log('in the selection', props.elementConfig.options)
     inputElement = (<select
       value={props.value}

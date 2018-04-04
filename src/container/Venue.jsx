@@ -1,17 +1,10 @@
+//Venue.jsx
 import React from 'react';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import {Link} from 'react-router-dom';
 
-const Venue = (props) => (
-  
- 
+const Venue = (props) => ( 
   <div className="card" key={props.id}>
- 
-
- {/* <Link to={"/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link> */}
-
-{/* 5ac2df601be331ef682ed21c */}
-
    <Link to={'/venue-detail/'+props.itemkey}>
    <img
       className="card-img-top"
@@ -25,9 +18,6 @@ const Venue = (props) => (
         <small className="text-muted">{props.city}, {props.vstate}</small>
       </p>
     </div>
-  </div>
- 
-  
+  </div> 
 );
-
 export default Venue;

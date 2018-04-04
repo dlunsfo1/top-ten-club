@@ -4,15 +4,18 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var port = 4200;
 var cors = require('cors');
-// adding in authentication 'lite'
+var config = require('./config/config');
 
-var bcrypt = require('bcrypt-nodejs');
-var session = require('express-session');
+console.log();
 
 // Mongoose connection with mongodb
 mongoose.Promise = require('bluebird');
 mongoose
-  .connect('mongodb://fontmonger:Pr3tty1nPinK@ds121599.mlab.com:21599/rpt05')
+  .connect(
+    `mongodb://${config.CLIENT_ID}:${
+      config.SECRET_ID
+    }@ds121599.mlab.com:21599/rpt05`
+  )
   .then(() => {
     // if all is ok we will be here
     console.log('Start');

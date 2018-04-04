@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+require('./custom.css');
 import Home from './components/Home.jsx';
-import Admin from './container/Admin/Admin.jsx';
 import Venues from './container/Venues/Venues';
-import About from './components/About.jsx';
 import User from './container/User/User';
 import Login from './components/Login/Login';
-import VenueDetail from './container//VenueDetail/VenuDetail';
+import VenueDetail from './container//VenueDetail/VenueDetail';
 import VenueAdmin from './container/VenueAdmin/VenueAdmin.jsx';
 import Nav from './UI/Nav/Nav.jsx';
 import Footer from './UI/Footer/Footer.jsx';
@@ -24,9 +22,7 @@ class app extends Component {
     <div className="App">
     <Switch>
       <Route exact path="/" component={Home}/>  
-      <Route path="/about" component={About}/>
       <Route path="/venues" component={Venues} />
-      <Route path="/admin" component={Admin}/>
       <Route path="/venue-admin" component={VenueAdmin} />
       <Route path="/user" component={User} />
       <Route path="/log-in" component={Login} />

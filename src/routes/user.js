@@ -2,10 +2,11 @@ var express = require('express');
 var app = express();
 var userRouter = express.Router();
 var util = require('../lib/util');
+var cors = require('cors');
 
 // Require Item model in our routes module
 var User = require('../models/User');
-//
+// TODO: Authentication
 var bcrypt = require('bcrypt-nodejs');
 var session = require('express-session');
 
@@ -25,7 +26,8 @@ userRouter.route('/add').post(function(req, res) {
   item
     .save()
     .then(item => {
-      res.status(200).json({ Item: 'User added successfully' });
+      // res.status(200).json({ Item: 'User added successfully' });
+      res.redirect(301, 'http://localhost:8080');
     })
     .catch(err => {
       res.status(400).send('unable to save User to database');
