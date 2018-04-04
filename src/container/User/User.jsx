@@ -39,6 +39,7 @@ class User extends Component {
   }
 
   inputChangedHandler = (event, inputIdentifier) => {
+    event.preventDefault();
     console.log(event.target.value);
     // does not clone deeply!
     const updatedUserForm = {
@@ -93,7 +94,7 @@ class User extends Component {
   }
   return (
     <Aux>
-    <div className="container"> 
+    <div className="container detail"> 
     <h2>User info</h2>
    
     

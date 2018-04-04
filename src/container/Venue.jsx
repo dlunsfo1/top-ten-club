@@ -15,14 +15,14 @@ const Venue = (props) => (
    <Link to={'/venue-detail/'+props.itemkey}>
    <img
       className="card-img-top"
-      src="http://tomhoran.com/wp-content/uploads/2014/03/elliottsoysterbar.jpg"
-      alt="Card image cap"
+      src={'/images/' + props.img}
+      alt={props.name}
     />
     </Link>
     <div className="card-body">
       <h5 className="card-title">{ ReactHtmlParser(props.name)}</h5>
       <p className="card-text">
-        <small className="text-muted"></small>
+        <small className="text-muted">{props.city}, {props.vstate}</small>
       </p>
     </div>
   </div>

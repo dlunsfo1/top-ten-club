@@ -25,30 +25,35 @@ class Home extends Component {
     console.log(this.state.categories);
     return (
       <Aux>
-        <div className="container">
+        <div className="container-fluid">
         <div className="row">
 
-            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+            <div className="fitted-image fit-top-center col-sm contain" style={{background: 'url(plate-steak.jpg)'}}>
               <div className="overlay">
-                <div className="text lnr lnr-heart"></div>
+              <a href="/venues"><div className="text">Steakhouses</div></a>
+                {/* <div className="text lnr lnr-heart"></div> */}
               </div>
           </div>
 
-            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+            <div className="fitted-image fit-top-center col-sm contain" style={{background: 'url(plate-seafood.jpg)'}}>
               <div className="overlay">
-                <div className="text lnr lnr-heart"></div>
+              <a href="/venues"><div className="text">Seafood Houses</div></a>
+                {/* <div className="text lnr lnr-heart"></div> */}
+              </div>
+          </div>
+          </div>
+          <div className="row">
+            <div className="fitted-image fit-top-center col-sm contain" style={{background: 'url(steakhouse.jpg)'}}>
+              <div className="overlay">
+              <a href="/venues"><div className="text">Texas Steakhouses</div></a>
+                {/* <div className="text lnr lnr-heart"></div> */}
               </div>
           </div>
 
-            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
+            <div className="fitted-image fit-top-center col-sm contain" style={{background: 'url(bar-irish.jpg)'}}>
               <div className="overlay">
-                <div className="text lnr lnr-heart"></div>
-              </div>
-          </div>
-
-            <div className="col-sm contain cover-bkg" style={{background: 'url(https://placeimg.com/400/400/archg)'}}>
-              <div className="overlay">
-                <div className="text lnr lnr-heart"></div>
+              <a href="/venues"><div className="text">Irish Establishments</div></a>
+                {/* <div className="text lnr lnr-heart"></div> */}
               </div>
           </div>
       </div>

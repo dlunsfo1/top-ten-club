@@ -7,3 +7,9 @@ wrap.on('scroll', function(e) {
     wrap.removeClass('fix-search');
   }
 });
+
+console.log('this is here!');
+
+var myFunction = () => {
+  console.log('yes this loaded');
+};

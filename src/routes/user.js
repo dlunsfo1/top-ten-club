@@ -1,9 +1,22 @@
 var express = require('express');
 var app = express();
 var userRouter = express.Router();
+var util = require('../lib/util');
 
 // Require Item model in our routes module
 var User = require('../models/User');
+//
+var bcrypt = require('bcrypt-nodejs');
+var session = require('express-session');
+
+app.use(
+  session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+  })
+);
 
 // Defined store route
 userRouter.route('/add').post(function(req, res) {

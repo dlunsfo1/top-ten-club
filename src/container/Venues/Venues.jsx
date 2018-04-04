@@ -15,8 +15,6 @@ class Venues extends Component {
     axios.get('http://localhost:4200/items')
     // axios.get('https://topten-7ff98.firebaseio.com/venues/venue.json')
     .then(response => {
-
-    
       console.log('response data ', response.data[0].item);
       const fetchedVenues = [];
     //  console.log(response.data.length);
@@ -59,13 +57,12 @@ class Venues extends Component {
   render() {
     return (
      <Aux>
-       <div className="container">
-       <div className="row">
-       <div className="col-md">
+       <div className="container detail">
+       <div class="card-columns">
+      
       { this.state.venues.map((venue, i) => (
-        <Venue key={venue._id} name={venue.item.name} itemkey={venue._id} />
+        <Venue key={venue._id} name={venue.item.name} img={venue.item.imagefile} city={venue.item.city} vstate={venue.item.state} itemkey={venue._id} />
       )) }
-      </div>
       </div>
       </div>
       </Aux>

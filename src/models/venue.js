@@ -15,6 +15,7 @@ let Venue = new Schema(
       state: String,
       zipcode: String,
       venuecat: String,
+      imagefile: String,
       created_at: Date
     }
   },

@@ -172,7 +172,10 @@ class VenueAdmin extends Component {
 
     console.log(formData);
     
-    this.addItemService.sendData(formData);
+    this.addItemService.sendData(formData, () => {
+      console.log(true);
+    });
+
 
     // axios
     //   .post('https://topten-7ff98.firebaseio.com/venues/venue.json', venue)
@@ -197,6 +200,10 @@ class VenueAdmin extends Component {
 
   }
 
+  resetForm = () => {
+    this.setState(this.state);
+  }
+
   inputChangedHandler = (event, inputIdentifier) => {
     console.log(event.target.value);
     // does not clone deeply!
@@ -214,6 +221,7 @@ class VenueAdmin extends Component {
 
     updatedVenueForm[inputIdentifier] = updatedVenueFormElement;
     this.setState({ venueform: updatedVenueForm });
+   
 
   };
 
@@ -234,7 +242,7 @@ class VenueAdmin extends Component {
     console.log(formElementsArray);
 
     let form = (
-      <form onSubmit={this.venueUpdateHandler}>
+      <form id="venue" onSubmit={this.venueUpdateHandler}>
 
       
         {
@@ -258,7 +266,7 @@ class VenueAdmin extends Component {
     }
     return (
       <Aux>
-      <div className="container"> 
+      <div className="container detail"> 
       <h2>Venu info</h2>
         {form}
        </div> 

@@ -4,10 +4,15 @@ import { BrowserRouter, Route, NavLink, Link } from 'react-router-dom';
 const Footer = () => {
   return(
     <nav className="navbar navbar-light bg-light fixed-bottom">
-    <a className="navbar-brand" href="#">
+    <div className="container">
+    <a className="navbar-brand" href="#"><small className="copyright">Amererica's Top Ten Club &copy;2018
       {/* <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" className="d-inline-block align-top" alt="" /> */}
-      Brand
+      </small>
     </a>
+    <span className="navbar-text">
+    {/* <span className="lnr lnr-phone-handset"></span> */}
+    </span>
+    </div>
   </nav>
   );
 }

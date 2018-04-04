@@ -36,7 +36,7 @@ class Login extends Component {
       }
     }
   }
-
+ 
 
   loginService = new loginService();
 
@@ -56,6 +56,7 @@ class Login extends Component {
     console.log(formData);
     
     this.loginService.sendData(formData);
+    this.setState({userForm: initialState})
    
   }
 
@@ -76,7 +77,6 @@ class Login extends Component {
 
     updatedUserForm[inputIdentifier] = updatedUserFormElement;
     this.setState({ userForm: updatedUserForm });
-
   };
  
 
@@ -91,7 +91,8 @@ class Login extends Component {
     }
 
     return (
-      <div className="container">
+      <div className="container detail">
+      <h2>Welcome</h2>
 <form onSubmit={this.userUpdateHandler}>
 
       
